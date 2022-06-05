@@ -19,3 +19,5 @@ Imports:
     magrittr,
     rlang,
     sf
+URL: https://github.com/emitanaka/hexmap
+BugReports: https://github.com/emitanaka/hexmap/issues
