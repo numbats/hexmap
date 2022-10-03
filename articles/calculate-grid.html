@@ -138,20 +138,23 @@
 <span><span class="fu">plot_hex_tile</span><span class="op">(</span><span class="fl">0.25</span><span class="op">)</span></span></code></pre></div>
 <p><img src="calculate-grid_files/figure-html/unnamed-chunk-2-1.png" width="700"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span><span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span><span class="fl">0.3</span><span class="op">)</span></span></code></pre></div>
 <p><img src="calculate-grid_files/figure-html/unnamed-chunk-2-2.png" width="700"></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span><span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
 <p><img src="calculate-grid_files/figure-html/unnamed-chunk-2-3.png" width="700"></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <p><img src="calculate-grid_files/figure-html/unnamed-chunk-2-4.png" width="700"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <p><img src="calculate-grid_files/figure-html/unnamed-chunk-2-5.png" width="700"></p>
-<p>Using basic trigonometry for a regular hexagon of height <span class="math inline">\(h\)</span> and width <span class="math inline">\(w\)</span>, you can find that <span class="math inline">\(h = 2 w / \sqrt{3}\)</span>.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">plot_hex_tile</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<p><img src="calculate-grid_files/figure-html/unnamed-chunk-2-6.png" width="700"></p>
+<p>Using basic trigonometry for a regular hexagon of height <span class="math inline">\(h\)</span>, width <span class="math inline">\(w\)</span> and length <span class="math inline">\(b\)</span> as shown in the diagram below, you can find that <span class="math inline">\(h = 2 w / \sqrt{3}\)</span> and <span class="math inline">\(b = w / \sqrt{3}\)</span> .</p>
 <p><img src="hex-dim.png"><!-- --></p>
-<p>Putting it all together, you can find that the maximum and minimum number of hexagons in a row is <span class="math inline">\((x_2 - x_1) / c + 2\)</span> (even rows) and <span class="math inline">\((x_2 - x_1) / c + 1\)</span> (odd rows), respectively.</p>
+<p>Putting it all together, you can find that the maximum and minimum number of hexagons in a row is <span class="math inline">\(\lfloor x_2 - x_1 \rfloor / c + 2\)</span> (even rows) and <span class="math inline">\(\lfloor x_2 - x_1 \rfloor / c + 1\)</span> (odd rows), respectively. The maximum and minimum number of hexagons in a column (which we define as the number of hexagon where its center passes through a vertical line) is <span class="math inline">\(\lfloor (y_2 - y_1 + h / 2 - b) / (h + b) \rfloor + 1\)</span> and <span class="math inline">\(\lfloor (y_2 - y_1 + h / 2 - b) / (h + b) \rfloor\)</span> (need to double check this).</p>
   </main>
 </div>
 
