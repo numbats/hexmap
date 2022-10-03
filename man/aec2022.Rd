@@ -5,7 +5,12 @@
 \alias{aec2022}
 \title{Australian federal 2022 election map and winner}
 \format{
-An object of class \code{sf} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 151 rows and 5 columns.
+An object of class \code{sf} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 151 rows and 6 columns.
+}
+\source{
+The data incorporates electoral boundary data and election result data
+from © Commonwealth of Australia (Australian Electoral Commission) 2022
+\url{https://www.aec.gov.au/}
 }
 \usage{
 aec2022

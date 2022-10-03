@@ -28,6 +28,7 @@ aec2022 <- elec_map_2021 %>%
   mutate(winner = case_when(party %in% c("ALP") ~ "ALP",
                             party %in% c("GRN", "GVIC") ~ "GRN",
                             party %in% c("LNP", "NP", "LP") ~ "LNP",
-                            TRUE ~ "Other"))
+                            TRUE ~ "Other")) %>%
+  st_make_valid()
 
 usethis::use_data(aec2022, overwrite = TRUE)
