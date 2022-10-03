@@ -24,6 +24,10 @@ winners <- read_csv("https://results.aec.gov.au/27966/Website/Downloads/HouseDop
   distinct()
 
 aec2022 <- elec_map_2021 %>%
-  left_join(winners, by = "division")
+  left_join(winners, by = "division") %>%
+  mutate(winner = case_when(party %in% c("ALP") ~ "ALP",
+                            party %in% c("GRN", "GVIC") ~ "GRN",
+                            party %in% c("LNP", "NP", "LP") ~ "LNP",
+                            TRUE ~ "Other"))
 
 usethis::use_data(aec2022, overwrite = TRUE)
