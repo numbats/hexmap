@@ -68,16 +68,17 @@ plot_hex_tile <- function(cellsize = NULL, n = NULL) {
 }
 
 plot_hex_tile(0.25)
+plot_hex_tile(0.3)
 plot_hex_tile(0.5)
 plot_hex_tile(1)
 plot_hex_tile(n = 3)
 plot_hex_tile(n = 5)
 ```
 
-Using basic trigonometry for a regular hexagon of height $h$ and width $w$, you can find that $h = 2 w / \sqrt{3}$.
+Using basic trigonometry for a regular hexagon of height $h$, width $w$ and length $b$ as shown in the diagram below, you can find that $h = 2 w / \sqrt{3}$ and $b = w / \sqrt{3}$ .
 
 ```{r, echo = FALSE}
 knitr::include_graphics("hex-dim.png")
 ```
 
-Putting it all together, you can find that the maximum and minimum number of hexagons in a row is $(x_2 - x_1) / c + 2$ (even rows) and $(x_2 - x_1) / c + 1$ (odd rows), respectively.
+Putting it all together, you can find that the maximum and minimum number of hexagons in a row is $\lfloor x_2 - x_1 \rfloor / c + 2$ (even rows) and $\lfloor x_2 - x_1 \rfloor / c + 1$ (odd rows), respectively. The maximum and minimum number of hexagons in a column (which we define as the number of hexagon where its center passes through a vertical line) is $\lfloor (y_2 - y_1 + h / 2 - b)  / (h + b) \rfloor + 1$  and $\lfloor (y_2 - y_1 + h / 2 - b)  / (h + b) \rfloor$ (need to double check this).
