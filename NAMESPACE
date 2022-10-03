@@ -2,5 +2,7 @@
 
 export("%>%")
 export(add_hexmap)
+export(map_grid)
+export(map_match)
 export(transition_map_data)
 importFrom(magrittr,"%>%")

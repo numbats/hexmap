@@ -12,6 +12,7 @@ This package takes an sf map object and converts into a hex tile map. This aids 
 Useful links:
 \itemize{
   \item \url{https://github.com/emitanaka/hexmap}
+  \item \url{https://numbats.github.io/hexmap/}
   \item Report bugs at \url{https://github.com/emitanaka/hexmap/issues}
 }
 
