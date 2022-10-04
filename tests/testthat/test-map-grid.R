@@ -9,6 +9,7 @@ test_that("calculate number of hexagons", {
     list() %>%
     sf::st_polygon()
 
+  # calculate_cellsize is the function unknown; n = nhex = number of hexagons wanted; square = the input object
   expect_equal(calculate_cellsize(square, n = compute_ngrid_unit_square(cellsize = 0.5)),
                0.5)
 })
