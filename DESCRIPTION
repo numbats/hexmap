@@ -27,6 +27,7 @@ Depends:
 LazyData: true
 Suggests: 
     geogrid,
+    ozmaps,
     ggplot2,
     knitr,
     rmarkdown,
