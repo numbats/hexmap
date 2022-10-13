@@ -43,6 +43,9 @@
     <loc>https://numbats.github.io/hexmap/reference/pipe.html</loc>
   </url>
   <url>
+    <loc>https://numbats.github.io/hexmap/reference/tile_allocate.html</loc>
+  </url>
+  <url>
     <loc>https://numbats.github.io/hexmap/reference/transition_map_data.html</loc>
   </url>
 </urlset>
