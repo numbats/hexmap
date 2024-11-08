@@ -21,7 +21,7 @@
 #'   geom_sf(data = australia) +
 #'   geom_sf(data = grid, aes(fill = NAME), alpha = 0.2)
 #'
-#' @importFrom sf st_centroid st_geometry
+#' @importFrom sf st_centroid st_geometry st_geometry<-
 #' @export
 tile_allocate <- function(object, tile) {
   require_package("geogrid")
